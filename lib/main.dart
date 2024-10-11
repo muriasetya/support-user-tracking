@@ -26,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if (_usernameController.text.isNotEmpty && _passwordController.text.isNotEmpty) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => FormScreen()),
+        MaterialPageRoute(builder: (context) => FormScreen(maintainer: _usernameController.text)),
       );
     } else {
       // Pesan error jika username atau password kosong
